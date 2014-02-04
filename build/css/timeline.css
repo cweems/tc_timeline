@@ -130,7 +130,7 @@
 }
 
 .vco-storyjs {
-    font-family: Georgia,Times New Roman,Times,serif;
+    font-family: Arial,sans-serif;
 }
 
 .vco-storyjs .twitter,.vco-storyjs .vcard,.vco-storyjs .messege,.vco-storyjs .credit,.vco-storyjs .caption,.vco-storyjs .zoom-in,.vco-storyjs .zoom-out,.vco-storyjs .back-home,.vco-storyjs .time-interval div,.vco-storyjs .time-interval-major div,.vco-storyjs .nav-container {
@@ -146,11 +146,11 @@
 }
 
 .vco-storyjs p,.vco-storyjs blockquote,.vco-storyjs blockquote p,.vco-storyjs .twitter blockquote p {
-    font-family: Georgia,Times New Roman,Times,serif !important;
+    font-family: 'Helvetica Neue', sans-serif !important;
 }
 
 .vco-storyjs .vco-feature h1,.vco-storyjs .vco-feature h2,.vco-storyjs .vco-feature h3,.vco-storyjs .vco-feature h4,.vco-storyjs .vco-feature h5,.vco-storyjs .vco-feature h6 {
-    font-family: Georgia,Times New Roman,Times,serif;
+    font-family: 'Helvetica Neue', sans-serif;
 }
 
 .timeline-tooltip {
@@ -267,7 +267,7 @@
 }
 
 .vco-storyjs h3 .active,.vco-storyjs h4 .active,.vco-storyjs h5 .active,.vco-storyjs h6 .active {
-    color: #08c;
+    color: #09c;
 }
 
 .vco-storyjs h3 {
@@ -623,7 +623,7 @@
 
 .fancybox-title {
     visibility: hidden;
-    font: normal 13px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font: normal 13px/20px sans-serif;
     position: relative;
     text-shadow: none;
     z-index: 8050;
@@ -878,7 +878,7 @@
 }
 
 .vco-notouch .vco-slider .slider-item .content .content-container .media .media-container .wikipedia h4 a:hover {
-    color: #08c;
+    color: #09c;
     text-decoration: none;
 }
 
@@ -1387,7 +1387,7 @@
 }
 
 .vco-slider .slider-item .content .content-container .googleplus .proflinkPrefix {
-    color: #08c;
+    color: #09c;
 }
 
 .vco-slider .slider-item .content .content-container .googleplus .created-at {
@@ -1687,7 +1687,7 @@
 }
 
 .vco-storyjs a {
-    color: #08c;
+    color: #09c;
     text-decoration: none;
 }
 
@@ -1924,7 +1924,7 @@
 }
 
 .vco-notouch .vco-navigation .vco-toolbar .zoom-in:hover,.vco-notouch .vco-navigation .vco-toolbar .zoom-out:hover,.vco-notouch .vco-navigation .vco-toolbar .back-home:hover {
-    color: #08c;
+    color: #09c;
     cursor: pointer;
     filter: alpha(opacity=100);
     -khtml-opacity: 1;
@@ -1937,7 +1937,7 @@
 }
 
 .vco-notouch .vco-navigation .timenav .content .marker.active:hover .flag .flag-content h3,.vco-notouch .vco-navigation .timenav .content .marker.active:hover .flag-small .flag-content h3 {
-    color: #08c;
+    color: #09c;
 }
 
 .vco-notouch .vco-navigation .timenav .content .marker.active:hover .flag .flag-content h4,.vco-notouch .vco-navigation .timenav .content .marker.active:hover .flag-small .flag-content h4 {
@@ -2171,7 +2171,7 @@
     left: 50%;
     width: 3px;
     height: 150px;
-    background-color: #08c;
+    background-color: #09c;
     z-index: 1;
     -webkit-box-shadow: 1px 1px 7px rgba(0,0,0,0.3);
     -moz-box-shadow: 1px 1px 7px rgba(0,0,0,0.3);
@@ -2245,18 +2245,18 @@
 }
 
 .vco-timeline .vco-navigation .timenav .content .marker.active .dot {
-    background: #08c;
+    background: #09c;
     z-index: 200;
 }
 
 .vco-timeline .vco-navigation .timenav .content .marker.active .line {
     z-index: 199;
-    background: #08c;
+    background: #09c;
     width: 1px;
 }
 
 .vco-timeline .vco-navigation .timenav .content .marker.active .line .event-line {
-    background: #08c;
+    background: #09c;
     filter: alpha(opacity=75);
     -khtml-opacity: .75;
     -moz-opacity: .75;
@@ -2272,7 +2272,7 @@
 }
 
 .vco-timeline .vco-navigation .timenav .content .marker.active .flag .flag-content h3,.vco-timeline .vco-navigation .timenav .content .marker.active .flag-small .flag-content h3 {
-    color: #08c;
+    color: #09c;
     margin-top: 5px;
 }
 
@@ -2353,7 +2353,7 @@
     left: 0;
     height: 1px;
     width: 1px;
-    background: #08c;
+    background: #09c;
     filter: alpha(opacity=15);
     -khtml-opacity: .15;
     -moz-opacity: .15;
@@ -2720,7 +2720,7 @@
 }
 
 .vco-timeline .vco-navigation .timenav .content .era6 div {
-    background: #08c;
+    background: #09c;
     filter: alpha(opacity=10);
     -khtml-opacity: .1;
     -moz-opacity: .1;
@@ -2851,7 +2851,7 @@
 }
 
 .vco-timeline .vco-navigation .timenav .time .time-interval .era6 {
-    color: #08c;
+    color: #09c;
     filter: alpha(opacity=50);
     -khtml-opacity: .5;
     -moz-opacity: .5;

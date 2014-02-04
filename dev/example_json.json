@@ -9,7 +9,6 @@
         "date": [
             {
                 "startDate":"2011,12,12",
-				"endDate":"2012,1,27",
                 "headline":"Vine",
                 "text":"<p>Vine Test</p>",
                 "asset":
@@ -21,7 +20,6 @@
             },
             {
                 "startDate":"2012,1,26",
-				"endDate":"2012,1,27",
                 "headline":"Sh*t Politicians Say",
                 "text":"<p>In true political fashion, his character rattles off common jargon heard from people running for office.</p>",
                 "asset":
@@ -55,7 +53,7 @@
             },
 			{
                 "startDate":"2011,12,12",
-                "headline":"Sh*t Girls Say",
+                "headline":"Example Title",
                 "text":"",
                 "asset":
                 {
