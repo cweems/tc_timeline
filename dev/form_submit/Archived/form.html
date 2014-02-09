@@ -10,10 +10,10 @@
     <h2>Form</h2>
 
     <form action="" method="post">
-        Date:<br><input maxlength="12" name="user[date]" size="12" type="text"><br>
-        Description:<br> <textarea cols="40" name="user[description]" rows="5" wrap="physical" placeholder="Enter a cool experience that you had had with technology"></textarea>
+        Date:<br><input maxlength="12" name="timeline[date][startdate]" size="12" type="text"><br>
+        Description:<br> <textarea cols="40" name="timeline[text]" rows="5" wrap="physical" placeholder="Enter a cool experience that you had had with technology"></textarea>
         <br>
-        Photo:<br><input maxlength="12" name="user[photo-link]" size="12" type="text"><br><br>
+        Photo:<br><input maxlength="12" name="timeline[date][asset][media]" size="12" type="text"><br><br>
         <p><input type="submit"></p>
     </form>
 
@@ -25,3 +25,4 @@
 <script type="text/javascript" src="script.js"></script>
 <script type="text/javascript" src="serialize-json.js"></script>
 </html>
+
