@@ -3,28 +3,25 @@
 <html ng-app="formApp">
 <head>
     <title></title>
+    <link rel="stylesheet" href="css/jquery.justifiedgallery.css" type="text/css" media="all" />
 </head>
 
 <body>
     <form action=
     "https://docs.google.com/forms/d/1JlGM4KOnGfHF5HoOP-FqMBYV-iH2USUewORegNBDSLU/formResponse"
     id="ss-form" method="post" name="ss-form" onsubmit="" target="_self">
-        <div style="margin-left: 2em; padding-left: 0">
             <div class="ss-form-question errorbox-good">
                 <div class="ss-item ss-text" dir="ltr">
                     <div class="ss-form-entry">
                         <div class="ss-q-title">
-                            <label class="ss-q-item-label" for=
-                            "entry_1940941374">Post Title</label>
+                            <label class="ss-q-item-label" for="entry_1940941374">Post Title</label>
                         </div>
 
                         <div class="ss-q-help ss-secondary-text" dir="ltr">
-                            <label class="ss-q-item-label" for=
-                            "entry_1940941374">(A very brief description of
+                            <label class="ss-q-item-label" for="entry_1940941374">(A very brief description of
                             your first memory of the internet)</label>
-                        </div><input class="ss-q-short" dir="auto" id=
-                        "entry_1940941374" name="entry.1940941374" title=""
-                        type="text" value="">
+                        </div>
+                            <input class="ss-q-short" dir="auto" id="entry_1940941374" name="entry.1940941374" title="" type="text" value="">
 
                         <div class="error-message"></div>
                     </div>
@@ -102,17 +99,23 @@
                     </tbody>
                 </table>
             </div>
-        </div>
     </form>
 
     
     Search for images:<input id="imageQuery" value="Search">
-    <p></p>
+    <p id="queryResult"></p>
+    <p id="sortResult"></p>
+    <select class="k-select" id="sort">
+            <option value="interestingness-desc" selected="selected">Popularity</option>
+            <option value="relevance">Relevance</option>
+            <option value="date-posted-desc">Recent</option>
+    </select>
     <button id="imageSearchButton">Search</button>
+
     <div id="images"></div>
 </body>
-<script src="http://code.angularjs.org/1.2.12/angular.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
     <script type="text/javascript" src="js/controller.js"></script>
+    <script type="text/javascript" src="js/jquery.justifiedgallery.js"></script>
 
 </html>
