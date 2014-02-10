@@ -104,14 +104,12 @@
             </div>
         </div>
     </form>
+
+    
+    Search for images:<input id="imageQuery" value="Search">
+    <p></p>
     <button id="imageSearchButton">Search</button>
-    <div controller="imageSearch">
-    <input type="text" ng-model="user.query" />
-
-    <pre>form = {{user.query}}</pre>
-    <pre>master = {{master | json}}</pre>
-
-    </div>
+    <div id="images"></div>
 </body>
 <script src="http://code.angularjs.org/1.2.12/angular.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
