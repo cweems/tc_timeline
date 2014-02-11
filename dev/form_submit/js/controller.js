@@ -20,7 +20,8 @@ $('#imageSearchButton').click(function(){ //Execute search when user clicks butt
 	$('#images').empty(); //Make sure #images gets cleared in case user searches multiple times 
 	var cleanQuery = searchQuery.replace(/\s+/g, '+'); //Replace spaces in the query with +
 	console.log(cleanQuery);
-	var src;
+	var srcLarge;
+	var srcMedium
 	$.getJSON('http://api.flickr.com/services/rest/',{
 		method: 'flickr.photos.search',
 		api_key: '68dc576fbfc642f59fdbd1032a6c6475',
@@ -35,15 +36,19 @@ $('#imageSearchButton').click(function(){ //Execute search when user clicks butt
 	}, 
 		function(data){
 	    $.each(data.photos.photo, function(i,item){
-			src = "http://farm"+ item.farm +".static.flickr.com/"+ item.server +"/"+ item.id +"_"+ item.secret +"_m.jpg";
-			$("<img class='flickrImage'/>").attr("src", src).appendTo("#images");
+			srcLarge = "http://farm" + item.farm + ".static.flickr.com/" + item.server + "/" + item.id +"_"+ item.secret +"_m.jpg";
+			srcMedium = item.url_z;
+			console.log(srcMedium);
+			$("<a id='imageLink' href='" + srcLarge + "''><img class='flickrImage' src='" + srcMedium + "'/></a>").appendTo("#images");
 			if ( i === 19 ) return false; //Limit to 20 photos
-			$("#images").justifiedGallery({
-				rowHeight: 150
-			});
+
 		});
 	});
 });
+
+$('#formatImg').click(function(){
+	$("#images").justifiedGallery();
+})
 
 $('.flickrImage').on('click', 'img', function(e){
 	e.preventDefault();
