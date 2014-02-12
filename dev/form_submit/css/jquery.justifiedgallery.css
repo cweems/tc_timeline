@@ -21,7 +21,7 @@ html{
 
 input, textarea{
     display: block;
-    width: 90%;
+    width: 100%;
     padding: 6px 12px;
     font-size: 14px;
     line-height: 1.428571429;
@@ -36,12 +36,8 @@ input, textarea{
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
 
-input{
-    height: 34px;
-}
-
-textarea{
-    height: 150px;
+.hidden{
+    opacity: 0;
 }
 
 /*End General HTML*/

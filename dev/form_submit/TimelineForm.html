@@ -3,18 +3,24 @@
 <html ng-app="formApp">
 <head>
     <title></title>
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/jquery.justifiedgallery.css" type="text/css" media="all" />
 </head>
 
 <body>
+    <div class="container well">
     <form action=
     "https://docs.google.com/forms/d/1JlGM4KOnGfHF5HoOP-FqMBYV-iH2USUewORegNBDSLU/formResponse"
     id="ss-form" method="post" name="ss-form" onsubmit="" target="_self">
-            <div class="ss-form-question errorbox-good">
+
+    <!--Left Column Start -->
+            <div class="col-md-6">
+
+            <div class="ss-form-question">
                 <div class="ss-item ss-text" dir="ltr">
                     <div class="ss-form-entry">
                         <div class="ss-q-title">
-                            <label class="ss-q-item-label" for="entry_1940941374">Post Title</label>
+                            <label class="ss-q-item-label" for="entry_1940941374">Headline</label>
                             <br>
                         </div>
 
@@ -22,33 +28,13 @@
                             <label class="ss-q-item-label" for="entry_1940941374">(A very brief description of
                             your first memory of the internet)</label>
                         </div>
-                            <input class="ss-q-short" dir="auto" id="entry_1940941374" name="entry.1940941374" title="" type="text" value="">
+                            <input class="ss-q-short" dir="auto" id="entry_1940941374" name="entry.1940941374" title="" type="text" value="" placeholder="Example: 'The Dial-Up Tone'">
 
                         <div class="error-message"></div>
                     </div>
                 </div>
             </div>
-
-            <div class="ss-form-question errorbox-good">
-                <div class="ss-item ss-paragraph-text" dir="ltr">
-                    <div class="ss-form-entry">
-                        <div class="ss-q-title">
-                            <label class="ss-q-item-label" for=
-                            "entry_903626388">What was your first memory of the
-                            internet?</label>
-                        </div>
-
-                        <div class="ss-q-help ss-secondary-text" dir="ltr">
-                        </div>
-                        <textarea class="ss-q-long" cols="0" dir="auto" id=
-                        "entry_903626388" name="entry.903626388" rows="8">
-</textarea>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="ss-form-question errorbox-good">
+            <div class="ss-form-question">
                 <div class="ss-item ss-item-required ss-date" dir="ltr">
                     <div class="ss-form-entry">
                         <div class="ss-q-title">
@@ -64,13 +50,37 @@
                     </div>
                 </div>
             </div>
+            <br>
+            <div class="ss-form-question">
+                <div class="ss-item ss-paragraph-text" dir="ltr">
+                    <div class="ss-form-entry">
+                        <div class="ss-q-title">
+                            <label class="ss-q-item-label" for=
+                            "entry_903626388">What was your first memory of the
+                            internet?</label>
+                        </div>
 
-            <div class="ss-form-question errorbox-good">
+                        <div class="ss-q-help ss-secondary-text" dir="ltr">
+                        </div>
+                        <textarea class="ss-q-long" cols="0" dir="auto" id=
+                        "entry_903626388" name="entry.903626388" rows="8" placeholder="Example: My first memory of the internet was the sound of my modem connecting to the internet. I still remember how it wasn't possible to use the internet and the phone line at the same time.">
+</textarea>
+
+                    </div>
+                </div>
+            </div>
+
+            </div>
+            <!--Left Column End -->
+            <!--Right Column Start -->
+            <div class="col-md-6">
+            <br>
+             <div class="ss-form-question">
                 <div class="ss-item ss-text" dir="ltr">
                     <div class="ss-form-entry">
                         <div class="ss-q-title">
                             <label class="ss-q-item-label" for=
-                            "entry_343155255">Choose an Image</label>
+                            "entry_343155255">Insert a link to an image here, or search for one below:</label>
                         </div>
 
                         <div class="ss-q-help ss-secondary-text" dir="ltr">
@@ -81,40 +91,43 @@
                         <div class="error-message"></div>
                     </div>
                 </div>
-            </div><input name="draftResponse" type="hidden" value=
-            "[,,&quot;-7578212691605999876&quot;] "> <input name="pageHistory"
-            type="hidden" value="0"> <input name="fromEmail" type="hidden"
-            value="false"> <input name="fbzx" type="hidden" value=
-            "-7578212691605999876">
-
+            </div>
+            <br>
             <div class="ss-item ss-navigate">
                 <table id="navigation-table">
                     <tbody>
                         <tr>
                             <td class="ss-form-entry goog-inline-block" dir=
                             "ltr" id="navigation-buttons">
-                                <button id="ss-submit" name="submit" type=
-                                "submit" value="Submit">Submit</button>
+                                <button id="ss-submit" class="btn btn-lg btn-success" name="submit" type=
+                                "submit" value="Submit">Submit to Timeline</button>
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
+            <br>
+           <input name="draftResponse" type="hidden" value=
+            "[,,&quot;-7578212691605999876&quot;] "> <input name="pageHistory"
+            type="hidden" value="0"> <input name="fromEmail" type="hidden"
+            value="false"> <input name="fbzx" type="hidden" value=
+            "-7578212691605999876">
+            <br>
+            <br>
     </form>
 
-    
     Search for images:<input id="imageQuery" placeholder="Search">
-    <p id="queryResult"></p>
     <p id="sortResult"></p>
     <select class="k-select" id="sort">
             <option value="interestingness-desc" selected="selected">Popularity</option>
             <option value="relevance">Relevance</option>
             <option value="date-posted-desc">Recent</option>
     </select>
-    <button id="imageSearchButton">Search</button>
-    <button id="formatImg">Format Images</button>
-
-    <div id="images"></div>
+    <button id="imageSearchButton" class="btn btn-default">Search</button>
+    <div id="images" class="hidden col-md-12"></div>
+</div>
+        </div>
+    </div>
 </body>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
     <script type="text/javascript" src="js/waitforimages.js"></script>
