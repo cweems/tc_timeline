@@ -93,7 +93,39 @@
                 </div>
             </div>
             <br>
-            <div class="ss-item ss-navigate">
+            <br>
+           <input name="draftResponse" type="hidden" value=
+            "[,,&quot;-7578212691605999876&quot;] "> <input name="pageHistory"
+            type="hidden" value="0"> <input name="fromEmail" type="hidden"
+            value="false"> <input name="fbzx" type="hidden" value=
+            "-7578212691605999876">
+    </form>
+
+    <div class="input-group">
+        <input type="text" id="imageQuery" class="form-control" placeholder="e.g. 'Dial up modem'">
+            <div class="input-group-btn">
+            <div class="input-group-btn">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Sort By <span class="caret"></span></button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Relevance</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Popularity</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Recency</a></li>
+                  </ul>
+            </div>
+            </div>
+            <span class="input-group-btn">
+                    <button id="imageSearchButton" class="btn btn-default" type="button">Search!</button>
+                </span>
+    </div>
+
+    <select class="k-select" id="sort">
+            <option value="interestingness-desc" selected="selected">Popularity</option>
+            <option value="relevance">Relevance</option>
+            <option value="date-posted-desc">Recent</option>
+    </select>
+    <br>
+    <br>
+    <div class="ss-item ss-navigate">
                 <table id="navigation-table">
                     <tbody>
                         <tr>
@@ -106,30 +138,15 @@
                     </tbody>
                 </table>
             </div>
-            <br>
-           <input name="draftResponse" type="hidden" value=
-            "[,,&quot;-7578212691605999876&quot;] "> <input name="pageHistory"
-            type="hidden" value="0"> <input name="fromEmail" type="hidden"
-            value="false"> <input name="fbzx" type="hidden" value=
-            "-7578212691605999876">
-            <br>
-            <br>
-    </form>
-
-    Search for images:<input id="imageQuery" placeholder="Search">
-    <p id="sortResult"></p>
-    <select class="k-select" id="sort">
-            <option value="interestingness-desc" selected="selected">Popularity</option>
-            <option value="relevance">Relevance</option>
-            <option value="date-posted-desc">Recent</option>
-    </select>
-    <button id="imageSearchButton" class="btn btn-default">Search</button>
-    <div id="images" class="hidden col-md-12"></div>
 </div>
         </div>
     </div>
+    <div class="container">
+    <div id="images" class="col-md-12"></div>
+    </div> 
 </body>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/waitforimages.js"></script>
     <script type="text/javascript" src="js/jquery.justifiedgallery.js"></script>
     <script type="text/javascript" src="js/controller.js"></script>
