@@ -2,8 +2,8 @@
 
 	'use strict';
 
-	var searchQuery = ''; //Declare global variable for our user's query
-	var sort = '';
+	var searchQuery = ''; //Declare global variable for user's query
+	var sort = 'interestingness-desc';
 
 	$('#imageQuery').keyup(function() { //Set searchQuery to value of input field
 			searchQuery = $(this).val();
@@ -15,6 +15,10 @@
 	$('select').change(function(){
 		sort = $('#sort').val();
 		console.log(sort);
+	});
+
+	$('#imageLink').click(function(){
+		console.log("success!");
 	});
 
 	$('#imageSearchButton').click(function(){ //Execute search when user clicks button
@@ -42,7 +46,7 @@
 					srcLarge = item.url_z;
 					picTitle = item.title;
 					console.log(srcSmall);
-					$("<a id='imageLink' href='" + srcLarge + "' title='" + picTitle + "'><img class='flickrImage' src='" + srcSmall + "' alt='" + picTitle + "'/></a>").appendTo("#images");
+					$("<a data='" + srcLarge + " href='" + srcLarge + "' title='" + picTitle + "'><img class='flickrImage' src='" + srcSmall + "' alt='" + picTitle + "'/></a>").appendTo("#images");
 						if ( i === 19 ) return false; //Limit to 20 photos
 				});
 					$('#images').waitForImages(function() { //Wait for images to load before formatting them

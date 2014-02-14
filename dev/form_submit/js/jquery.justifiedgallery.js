@@ -106,7 +106,7 @@ or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain Vie
 		function buildImage(image, suffix, nw, nh, l, minRowHeight, settings){
 			var ris;
 			ris =  "<div class=\"jg-image\" style=\"left:" + l + "px\">";
-			ris += " <a href=\"" + image["href"] + "\" ";
+			ris += " <div id='imageLink' href=\"" + image["href"] + "\" ";
 
 			if (typeof image["rel"] != 'undefined') ris += "rel=\"" + image["rel"] + "\"";
 			if (typeof image["target"] != 'undefined') ris += "target=\"" + image["target"] + "\"";
@@ -118,7 +118,7 @@ or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain Vie
 			if(settings.captions)
 				ris += "  <div style=\"bottom:" + (nh - minRowHeight) + "px;\" class=\"jg-image-label\">" + image["alt"] + "</div>";
 
-			ris += " </a></div>";
+			ris += " </div></div>";
 			return ris;
 		}
 
