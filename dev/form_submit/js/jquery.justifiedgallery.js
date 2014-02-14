@@ -112,7 +112,7 @@ or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain Vie
 			if (typeof image["target"] != 'undefined') ris += "target=\"" + image["target"] + "\"";
 
 			ris +=     "title=\"" + image["title"] + "\">";
-			ris += "  <img alt=\"" + image["alt"] + "\" src=\"" + image["src"] + suffix + image.extension + "\"";
+			ris += "  <img class='flickrImage' alt=\"" + image["alt"] + "\" src=\"" + image["src"] + suffix + image.extension + "\"";
 			ris +=        "style=\"width: " + nw + "px; height: " + nh + "px;\">";
 			
 			if(settings.captions)
