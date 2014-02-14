@@ -21,14 +21,13 @@
     	$('.sort-display').html(currentIndicator);
     });
 
-    $('.flickrImage').on('click','img', function (e) {
-		e.preventDefault();
-		alert('Clicked!');
-	});
+    $('#clearButton').click(function(){
+    	$('.justifiedGallery').empty();
+    })
 
     $('#imageSearchButton').click(function() { //Execute search when user clicks button
-    	$('#collapseOne').collapse("hide");
-        $('#images').empty(); //Make #images clear in case user searches multiple times
+        $('.justifiedGallery').empty(); //Make #images clear in case user searches multiple times
+        $('#collapseOne').collapse("hide");
         var cleanQuery = searchQuery.replace(/\s+/g, '+'); //Replace spaces in the query with +
         var srcLarge;
         var srcSmall;
