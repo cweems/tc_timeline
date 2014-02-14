@@ -8,14 +8,14 @@
             $('#imageSearchButton').click();
         }
     });
-    $('select').change(function() {
-        sort = $('#sort').val();
-        console.log(sort);
-    });
 
     $('.search-option').click(function(){
     	sort = $(this).attr('value');
+    	if(searchQuery != ''){
+    		$('#imageSearchButton').click();
+    	}
     	$(this).parent().addClass('active');
+    	$('li.search-option').removeClass('active');
     });
 
     $('.flickrImage').on('click','img', function (e) {

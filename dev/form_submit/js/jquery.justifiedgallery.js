@@ -44,7 +44,7 @@ or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain Vie
 			var loaded = 0;
 			var images = new Array($(cont).find("img").length);
 
-			if(images.length == 0) return;
+			if(images.length === 0) return;
 			
 			$(cont).append("<div class=\"jg-loading\"><div class=\"jg-loading-img\"></div></div>");
 
@@ -69,7 +69,7 @@ or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain Vie
 						images[index]["width"] = Math.ceil(this.width / (this.height / settings.rowHeight));
 					else
 						images[index]["width"] = this.width;
-					images[index]["height"] = settings.rowHeight;
+						images[index]["height"] = settings.rowHeight;
 
 					var usedSizeRangeRegExp = new RegExp("(" + settings.sizeRangeSuffixes.lt100 + "|" 
 														 + settings.sizeRangeSuffixes.lt240 + "|"  
