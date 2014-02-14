@@ -1,21 +1,24 @@
 (function(window) {
     'use strict';
+    $('#collapseOne').collapse("hide");
     var searchQuery = ''; //Declare global variable for user's query
     var sort = 'interestingness-desc';
     $('#imageQuery').keyup(function() { //Set searchQuery to value of input field
         searchQuery = $(this).val();
-        if (event.keyCode === 13) {
+        if (event.keyCode === 13) { // Execute search if user presses enter
             $('#imageSearchButton').click();
         }
     });
 
     $('.search-option').click(function(){
     	sort = $(this).attr('value');
-    	if(searchQuery != ''){
+    	if(searchQuery != ''){ //If user hasn't entered anything, don't search, otherwise redo the search with new filter
     		$('#imageSearchButton').click();
     	}
+    	$('.search-option').parent().removeClass('active');
     	$(this).parent().addClass('active');
-    	$('li.search-option').removeClass('active');
+    	var currentIndicator = $(this).text() + " <span class='caret'>"
+    	$('.sort-display').html(currentIndicator);
     });
 
     $('.flickrImage').on('click','img', function (e) {
@@ -24,6 +27,7 @@
 	});
 
     $('#imageSearchButton').click(function() { //Execute search when user clicks button
+    	$('#collapseOne').collapse("hide");
         $('#images').empty(); //Make #images clear in case user searches multiple times
         var cleanQuery = searchQuery.replace(/\s+/g, '+'); //Replace spaces in the query with +
         var srcLarge;
@@ -51,6 +55,7 @@
             });
             $('#images').waitForImages(function() { //Wait for images to load before formatting them
                 $('#images').justifiedGallery(); //Use justifiedGallery to make images fit together nicely
+                $('#collapseOne').collapse("show");
             });
         });
     });
