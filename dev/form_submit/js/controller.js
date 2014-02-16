@@ -34,14 +34,14 @@
         var picTitle;
         $.getJSON('http://api.flickr.com/services/rest/', {
             method: 'flickr.photos.search',
-            api_key: '68dc576fbfc642f59fdbd1032a6c6475',
+			api_key: '68dc576fbfc642f59fdbd1032a6c6475',
             tags: cleanQuery,
-            tag_mode: 'all',
+			tag_mode: 'all',
             sort: sort,
             extras: 'url_n,url_m,url_z,url_l',
             format: 'json',
-            per_page: 150,
-            safe_search: 1,
+			per_page: 150,
+			safe_search: 1,
             nojsoncallback: 1
         }, function(data) {
             $.each(data.photos.photo, function(i, item) {
