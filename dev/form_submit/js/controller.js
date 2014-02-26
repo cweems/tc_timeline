@@ -25,9 +25,15 @@
     	$('.justifiedGallery').empty();
     })
 
+    $(document).on("click", "#imageLink", function(e) { //Trigger when user clicks on an image
+        var clickedLink = $(this).attr("href");
+        $('.image-entry').val(clickedLink);
+        console.log(clickedLink);
+    });
+
     $('#imageSearchButton').click(function() { //Execute search when user clicks button
-        $('.justifiedGallery').empty(); //Make #images clear in case user searches multiple times
         $('#collapseOne').collapse("hide");
+        $('.justifiedGallery').empty(); //Make #images clear in case user searches multiple times
         var cleanQuery = searchQuery.replace(/\s+/g, '+'); //Replace spaces in the query with +
         var srcLarge;
         var srcSmall;
@@ -38,7 +44,7 @@
             tags: cleanQuery,
 			tag_mode: 'all',
             sort: sort,
-            extras: 'url_n,url_m,url_z,url_l',
+            extras: 'url_n,url_m,url_z,url_l', //Other pic resolutions
             format: 'json',
 			per_page: 150,
 			safe_search: 1,
@@ -46,11 +52,11 @@
         }, function(data) {
             $.each(data.photos.photo, function(i, item) {
                 srcSmall = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_m.jpg';
-                srcLarge = item.url_z;
+                srcLarge = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_z.jpg'; //Link to larger images for Timeline
                 picTitle = item.title;
                 console.log(srcSmall);
-                $("<a data='" + srcLarge + " href='" + srcLarge + "' title='" + picTitle + "'><img src='" + srcSmall + "' alt='" + picTitle + "'/></a>").appendTo("#images");
-                if (i === 19) {return false;} //Limit to 20 photos
+                $("<a class='image-link' data='" + srcLarge + "' href='" + srcLarge + "' title='" + picTitle + "'><img src='" + srcSmall + "' alt='" + picTitle + "'/></a>").appendTo("#images");
+                if (i === 19) {return false;} //Limit to 20 photos per Flickr API
             });
             $('#images').waitForImages(function() { //Wait for images to load before formatting them
                 $('#images').justifiedGallery(); //Use justifiedGallery to make images fit together nicely
